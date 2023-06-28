@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphVisualizer", "GraphVisualizer\GraphVisualizer.csproj", "{10D8D6D4-889D-4FD1-B723-6AD76A019FEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contract", "Contract\Contract.csproj", "{55FC1C71-647D-4A07-B8C1-6A337FCBD8DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10D8D6D4-889D-4FD1-B723-6AD76A019FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D8D6D4-889D-4FD1-B723-6AD76A019FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D8D6D4-889D-4FD1-B723-6AD76A019FEB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{10D8D6D4-889D-4FD1-B723-6AD76A019FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D8D6D4-889D-4FD1-B723-6AD76A019FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D8D6D4-889D-4FD1-B723-6AD76A019FEB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{55FC1C71-647D-4A07-B8C1-6A337FCBD8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FC1C71-647D-4A07-B8C1-6A337FCBD8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FC1C71-647D-4A07-B8C1-6A337FCBD8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FC1C71-647D-4A07-B8C1-6A337FCBD8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB357C35-F0AE-4980-A575-E1274A72EDA6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:GraphVisualizer"
+             x:Class="GraphVisualizer.CalculationPage"
+             Title="CalculationPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Resources>
+        
+        <drawable:UserGraphDrawer x:Key="drawable" />
+    </ContentPage.Resources>
+    
+    
+    <ScrollView>
+        
+        <VerticalStackLayout>
+        
+            <Button x:Name="ThemeSwitchButton"
+                        Text="Switch Theme"
+                        Clicked="SwitchTheme"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        TextColor="{DynamicResource ButtonTextColor}"
+                        FontSize="14"/>
+
+            <VerticalStackLayout>
+                
+                <GraphicsView Drawable="{DynamicResource drawable}"
+                              HeightRequest="550"
+                              WidthRequest="550"
+                              VerticalOptions="Center"
+                              HorizontalOptions="Center"/>
+
+                <Button x:Name="CalculateButton"
+                        Text="Выбрать библиотеку - обработчика"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        TextColor="{DynamicResource ButtonTextColor}"
+                        Clicked="ChooseLibFileAndGoToResultPage"
+                        WidthRequest="300"/>
+                
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>

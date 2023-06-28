@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GraphVisualizer.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+
+    <ContentPage.Resources>
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBackgroundColor}"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="TextColor" Value="{DynamicResource ButtonTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView BackgroundColor="{DynamicResource PageBackgroundColor}">
+        
+        <VerticalStackLayout>
+            
+            <Button x:Name="ThemeSwitchButton"
+                    Text="Switch Theme"
+                    Clicked="SwitchTheme"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                    TextColor="{DynamicResource ButtonTextColor}"
+                    FontSize="14"/>
+            
+            <VerticalStackLayout Spacing="25"
+                                 Padding="30,0"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+
+
+                <Label x:Name="MainTitle"
+                       Text="GraphSolver"
+                       TextColor="{DynamicResource LabelTextColor}"
+                       FontSize="42"
+                       Margin="50"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+                <Button x:Name="ChooseFileButton"
+                        Style="{DynamicResource buttonStyle}"
+                        Text="Выбрать файл"
+                        Clicked="ChooseFileAndGoToCalculatePage"/>
+    
+                <Button x:Name="InformationButton"
+                        Style="{DynamicResource buttonStyle}"
+                        Text="Информация"
+                        Clicked="NavigateToInfomationPage"/>
+
+                <Button x:Name="ExitButton"
+                        Style="{DynamicResource buttonStyle}"
+                        Text="Выйти"
+                        Clicked="Exit"/>
+
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>

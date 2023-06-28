@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:GraphVisualizer"
+             x:Class="GraphVisualizer.ResultPage"
+             Title="ResultPage"
+             Background="{DynamicResource PageBackgroundColor}"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    
+    <ContentPage.Resources>
+        <drawable:ResultGraphDrawer x:Key="drawable" />
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        
+        <VerticalStackLayout>
+            
+            <Button x:Name="ThemeSwitchButton"
+                    Text="Switch Theme"
+                    Clicked="SwitchTheme"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                    TextColor="{DynamicResource ButtonTextColor}"
+                    FontSize="14"/>
+            
+            <VerticalStackLayout x:Name="TotalLayout">
+                
+                <Label x:Name="Congratulations"
+                       Text="Ожидание..."
+                       HorizontalOptions="Center"
+                       FontSize="30"
+                       Margin="0, 30"
+                       TextColor="{DynamicResource LabelTextColor}"/>
+
+                <Button x:Name="RefreshButton"
+                        Text="Обновить"
+                        Clicked="RefreshButtonClicked" 
+                        HorizontalOptions="Center"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        TextColor="{DynamicResource ButtonTextColor}"/>
+
+                <Button x:Name="RestartButton"
+                        Text="Перезапустить"
+                        TextColor="{DynamicResource ButtonTextColor}"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        IsVisible="False"
+                        Clicked="RestartApp"
+                        HorizontalOptions="Center"/>
+                
+                <Entry x:Name="FilePathField"
+                       Text="Введите путь к файлу"
+                       TextColor="{DynamicResource LabelTextColor}"
+                       BackgroundColor="{DynamicResource PageBackgroundColor}"
+                       HorizontalOptions="Center"
+                       IsVisible="False"
+                       Margin="0, 30"
+                       WidthRequest="600"/>
+                
+                <Button x:Name="SubmitButton"
+                        Text="Сохранить"
+                        TextColor="{DynamicResource ButtonTextColor}"
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}"
+                        Clicked="SubmitResult"
+                        IsVisible="False"
+                        HorizontalOptions="Center"/>
+
+                <Label x:Name="DoneLabel"
+                       Text="Файл сохранен"
+                       TextColor="{DynamicResource LabelTextColor}"
+                       Margin="0, 30"
+                       IsVisible="False"
+                       HorizontalOptions="Center"
+                       FontSize="30"/>
+
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>
